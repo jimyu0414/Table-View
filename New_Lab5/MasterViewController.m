@@ -32,8 +32,10 @@
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    
     self.navigationItem.rightBarButtonItem = addButton;
-    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    //self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,13 +46,18 @@
 
 - (void)insertNewObject:(id)sender
 {
+    //make a context with specific fetchcontroller
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    //get fetch entity via fetch request
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
+    //make a new core data object via
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
     // If appropriate, configure the new managed object.
-    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+        [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+    //set more value
+        [newManagedObject setValue:@"default_Name" forKey:@"name"];
+        [newManagedObject setValue:@"default_Number" forKey:@"number"];
     
     // Save the context.
     NSError *error = nil;
@@ -118,23 +125,28 @@
     }
 }
 
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        //make the selected indexpath
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        //take the object out from fetchedResultsController
         NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        //use segue to get destinationViewController and excute the method
         [[segue destinationViewController] setDetailItem:object];
+        [[segue destinationViewController] getContext:self.managedObjectContext];
     }
 }
 
 #pragma mark - Fetched results controller
-
+//set&return personal fetchResultsController
 - (NSFetchedResultsController *)fetchedResultsController
 {
     if (_fetchedResultsController != nil) {
         return _fetchedResultsController;
     }
-    
+    //make a fetch request
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
@@ -229,7 +241,8 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+    NSString *time = [[object valueForKey:@"timeStamp"] description];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@",[object valueForKey:@"name"],time] ;
 }
 
 @end

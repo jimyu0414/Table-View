@@ -15,7 +15,6 @@
 		9A618718190929B6002BF77B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A618717190929B6002BF77B /* main.m */; };
 		9A61871C190929B6002BF77B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61871B190929B6002BF77B /* AppDelegate.m */; };
 		9A61871F190929B6002BF77B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A61871D190929B6002BF77B /* Main_iPhone.storyboard */; };
-		9A618722190929B6002BF77B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A618720190929B6002BF77B /* Main_iPad.storyboard */; };
 		9A618725190929B6002BF77B /* New_Lab5.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A618723190929B6002BF77B /* New_Lab5.xcdatamodeld */; };
 		9A618728190929B6002BF77B /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A618727190929B6002BF77B /* MasterViewController.m */; };
 		9A61872B190929B6002BF77B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A61872A190929B6002BF77B /* DetailViewController.m */; };
@@ -26,6 +25,7 @@
 		9A618737190929B6002BF77B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A61870F190929B6002BF77B /* CoreData.framework */; };
 		9A61873F190929B6002BF77B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A61873D190929B6002BF77B /* InfoPlist.strings */; };
 		9A618741190929B6002BF77B /* New_Lab5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A618740190929B6002BF77B /* New_Lab5Tests.m */; };
+		9ACA1864190D375C0091B3CC /* EditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ACA1863190D375C0091B3CC /* EditTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,6 @@
 		9A61871A190929B6002BF77B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9A61871B190929B6002BF77B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9A61871E190929B6002BF77B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		9A618721190929B6002BF77B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		9A618724190929B6002BF77B /* New_Lab5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = New_Lab5.xcdatamodel; sourceTree = "<group>"; };
 		9A618726190929B6002BF77B /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		9A618727190929B6002BF77B /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
@@ -63,6 +62,8 @@
 		9A61873C190929B6002BF77B /* New_Lab5Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "New_Lab5Tests-Info.plist"; sourceTree = "<group>"; };
 		9A61873E190929B6002BF77B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9A618740190929B6002BF77B /* New_Lab5Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = New_Lab5Tests.m; sourceTree = "<group>"; };
+		9ACA1862190D375C0091B3CC /* EditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTableViewController.h; sourceTree = "<group>"; };
+		9ACA1863190D375C0091B3CC /* EditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,11 +129,12 @@
 				9A61871A190929B6002BF77B /* AppDelegate.h */,
 				9A61871B190929B6002BF77B /* AppDelegate.m */,
 				9A61871D190929B6002BF77B /* Main_iPhone.storyboard */,
-				9A618720190929B6002BF77B /* Main_iPad.storyboard */,
-				9A618726190929B6002BF77B /* MasterViewController.h */,
-				9A618727190929B6002BF77B /* MasterViewController.m */,
+				9ACA1862190D375C0091B3CC /* EditTableViewController.h */,
+				9ACA1863190D375C0091B3CC /* EditTableViewController.m */,
 				9A618729190929B6002BF77B /* DetailViewController.h */,
 				9A61872A190929B6002BF77B /* DetailViewController.m */,
+				9A618726190929B6002BF77B /* MasterViewController.h */,
+				9A618727190929B6002BF77B /* MasterViewController.m */,
 				9A61872C190929B6002BF77B /* Images.xcassets */,
 				9A618723190929B6002BF77B /* New_Lab5.xcdatamodeld */,
 				9A618712190929B6002BF77B /* Supporting Files */,
@@ -213,7 +215,7 @@
 		9A6186FE190929B6002BF77B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = yu;
 				TargetAttributes = {
 					9A618731190929B6002BF77B = {
@@ -245,7 +247,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A618722190929B6002BF77B /* Main_iPad.storyboard in Resources */,
 				9A61872D190929B6002BF77B /* Images.xcassets in Resources */,
 				9A61871F190929B6002BF77B /* Main_iPhone.storyboard in Resources */,
 				9A618716190929B6002BF77B /* InfoPlist.strings in Resources */,
@@ -268,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A61872B190929B6002BF77B /* DetailViewController.m in Sources */,
+				9ACA1864190D375C0091B3CC /* EditTableViewController.m in Sources */,
 				9A618728190929B6002BF77B /* MasterViewController.m in Sources */,
 				9A61871C190929B6002BF77B /* AppDelegate.m in Sources */,
 				9A618725190929B6002BF77B /* New_Lab5.xcdatamodeld in Sources */,
@@ -310,14 +312,6 @@
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
-		9A618720190929B6002BF77B /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9A618721190929B6002BF77B /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		9A61873D190929B6002BF77B /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -333,7 +327,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -373,7 +366,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -432,7 +424,6 @@
 		9A618748190929B6002BF77B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/New_Lab5.app/New_Lab5";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -455,7 +446,6 @@
 		9A618749190929B6002BF77B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/New_Lab5.app/New_Lab5";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -490,6 +480,7 @@
 				9A618746190929B6002BF77B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A618747190929B6002BF77B /* Build configuration list for PBXNativeTarget "New_Lab5Tests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +489,7 @@
 				9A618749190929B6002BF77B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

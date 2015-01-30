@@ -16,7 +16,9 @@
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
 
+//declare nsfetchcontroller =
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
